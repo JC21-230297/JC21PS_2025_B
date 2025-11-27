@@ -22,7 +22,8 @@ public class JoinRequestRepository {
          * TODO ➊ 初期表示情報を取得するSQLを完成させる。
          */
         String sql = """
-
+                    SELECT * 
+                    FROM mst_club;
                 """;
 
         List<JoinRequestEntity> responseEntity = new ArrayList<>();

@@ -82,6 +82,9 @@ public class JoinRequestController {
         /*
          * TODO ➊ 初期表示情報取得結果に応じて、以下の条件文を完成させる。
          */
+        String notRrequestClubMessage = messageSource.getMessage("notRrequestClubMessage", null, Locale.getDefault());
+        mav.addObject("notRrequestClubMessage", notRrequestClubMessage);
+        mav.addObject("userId", form);
 
         mav.addObject("leaderClubId", leaderClubId);
 
@@ -115,6 +118,7 @@ public class JoinRequestController {
 
         try {
             boolean result = joinRequestService.insertJoinRequest(joinRequestSaveDto);
+
             /*
              * TODO ➋ インサートの成功、失敗に応じて、処理を変更する。
              */
