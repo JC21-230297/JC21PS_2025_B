@@ -159,8 +159,10 @@ public class JoinRequestController {
 
         } catch (Exception e) {
             // DB接続に失敗した場合、エラー画面に遷移
+            // DB接続に失敗した場合、エラー画面に遷移
             mav.setViewName("error");
         }
         return mav;
     }
 }
+
